@@ -1,0 +1,55 @@
+
+DATA DICTIONARY - CNC_SIMULATION_DATA_CARBIDE.CSV
+==================================================
+
+GENERAL INFORMATION:
+- timestamp: Date and time of measurement (YYYY-MM-DD HH:MM:SS)
+- tool_id: Unique identifier for each carbide tool (CB001-CB020)
+- tool_type: Always 'Carbide' in this dataset
+- machine_id: CNC machine identifier
+- shift: Work shift (Morning/Afternoon/Night)
+
+TOOL SPECIFICATIONS:
+- carbide_grade: ISO grade (P10/P20/P30/M20/K10)
+- coating: Surface coating (TiN/TiAlN/TiCN/AlCrN/Uncoated)
+- tool_diameter_mm: Cutting tool diameter in millimeters
+- number_of_flutes: Number of cutting edges
+
+WORKPIECE:
+- workpiece_material: Material being machined
+- workpiece_hardness_HB: Brinell hardness number
+
+CUTTING PARAMETERS:
+- spindle_speed_rpm: Rotational speed (revolutions per minute)
+- feed_rate_mm_min: Linear feed speed (mm/minute)
+- cutting_speed_m_min: Surface speed (meters/minute)
+- feed_per_tooth_mm: Chip load per cutting edge (mm)
+- axial_depth_mm: Depth of cut in Z-axis (mm)
+- radial_depth_mm: Width of cut in XY-plane (mm)
+
+PROCESS METRICS:
+- cutting_time_min: Cumulative cutting time (minutes)
+- parts_produced: Number of parts made with this tool
+- material_removal_rate_cm3_min: Volume of material removed (cm³/min)
+- power_consumption_kW: Spindle power (kilowatts)
+- cutting_force_increase_%: Force increase due to wear (%)
+
+CONDITION MONITORING:
+- temperature_rise_C: Temperature above ambient (Celsius)
+- vibration_mm_s: Vibration amplitude (mm/second)
+- surface_roughness_Ra_um: Surface finish (micrometers)
+- flank_wear_VB_mm: Wear on cutting edge (mm)
+- crater_wear_KT_mm: Wear on tool face (mm)
+- dimensional_deviation_mm: Part dimension error (mm)
+- chip_thickness_ratio: Chip compression ratio
+- chip_color: Visual chip color (temperature indicator)
+- edge_chipping: Binary flag (0=No, 1=Yes)
+
+COOLANT SYSTEM:
+- coolant_concentration_%: Coolant mixture percentage
+- coolant_flow_L_min: Flow rate (liters/minute)
+- coolant_pressure_bar: Delivery pressure (bar)
+
+TARGET VARIABLES:
+- tool_condition: Numeric (0=Good, 1=Acceptable, 2=Replace)
+- tool_condition_desc: Text description of condition
