@@ -25,4 +25,7 @@ preventing catastrophic failures and saving €15,000 in 6 months.
 ## Installation
 ```bash
 pip install -r requirements.txt
+CNC Carbide Tool Data Generator.py or import information into data folder
 python tool_wear_prediction.py
+model_deployment.py
+streamlit run dashboard.py
